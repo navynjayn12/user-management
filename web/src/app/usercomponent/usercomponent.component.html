@@ -1,0 +1,27 @@
+<div class="col-md-12 mt-5">
+  <div class="col-md-12 row">
+    <h2 class="col-md-11"><strong>User List</strong></h2>
+    <button type="button" class="btn btn-primary btn-sm col-md-1" [routerLink]="['../']">Logout</button>
+  </div>
+
+  <table class="table table-bordered mt-2" matSort (matSortChange)="sortData($event)">
+    <thead>
+      <tr>
+        <th mat-sort-header="userName">UserName</th>
+        <th mat-sort-header="projectName">ProjectTitle</th>
+        <th mat-sort-header="categoryName">CategoryName</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let data of userList">
+        <td>{{data.userName}}</td>
+        <td>{{data.projectName}}</td>
+        <td>{{data.categoryName}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <mat-paginator [length]="this.userTotal" (page)="pagination($event)" [pageSize]="2"
+    [pageSizeOptions]="[2, 4, 6, 8, 10]">
+  </mat-paginator>
+
+</div>

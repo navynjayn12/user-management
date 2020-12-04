@@ -1,0 +1,26 @@
+{
+  "name": "auction-node-task",
+  "version": "1.0.0",
+  "description": "auction node task",
+  "main": "server.js",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "chalk": "^4.1.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.12",
+    "moment": "^2.29.1",
+    "msnodesqlv8": "^2.0.8",
+    "mssql": "^6.2.3",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.6",
+    "objection": "^2.2.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Navyn NJ",
+  "license": "ISC"
+}

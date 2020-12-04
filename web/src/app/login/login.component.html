@@ -1,0 +1,30 @@
+<div class="col-md-12 mt-5">
+    <h2><strong>LOGIN</strong></h2>
+    <div class="col-md-4 mt-2">
+        <form (ngSubmit)="onSubmit(f)" #f="ngForm">
+            <div class="form-group ">
+                <label for="userName">User Name:</label>
+                <input type="userName" class="form-control" id="userName" ngModel name="userName"
+                    placeholder="Enter userName" autocomplete="off" required>
+                <span
+                    *ngIf="f && f.form &&  f.form['controls'] && f.form['controls']['userName'] && f.form['controls']['userName']['invalid'] && f.form['controls']['userName']['touched']">
+                    <span style="color:red" *ngIf="f.form['controls']['userName']['errors']['required']">
+                        Please Enter user Name
+                    </span>
+                </span>
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" class="form-control" id="password" ngModel name="password"
+                    placeholder="Enter password" autocomplete="off" required>
+                <span
+                    *ngIf="f && f.form &&  f.form['controls'] && f.form['controls']['password'] && f.form['controls']['password']['invalid'] && f.form['controls']['password']['touched']">
+                    <span style="color:red" *ngIf="f.form['controls']['password']['errors']['required']">
+                        Please Enter Password
+                    </span>
+                </span>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+</div>
